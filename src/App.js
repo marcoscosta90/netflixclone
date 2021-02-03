@@ -55,7 +55,18 @@ export default () => {
           {movieList.map((item, key) => (
             <MovieRow key={key} title={item.title} items={item.items}/>
           ))}
-        </section>        
+        </section>   
+
+        <footer>
+            Feito com <span role="img" aria-label="coracao"> ♥ </span> pelo Marcos Costa <br />
+            Direitos de imagem para NetFlix <br />
+            Dados pego pelo site Themoviedb.org
+        </footer>     
+        {movieList.length <= 0 &&
+          <div className="loading">
+            <img src="https://media.filmelier.com/news/br/2020/03/Netflix_LoadTime.gif" alt="Carregando" /> 
+          </div>
+        }
       </div>
     );
 }
